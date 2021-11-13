@@ -1,0 +1,17 @@
+{
+  "name": "space-tourism-website-solution",
+  "version": "1.0.0",
+  "description": "Solution to Front End Mentor challenge to build a space tourism website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "author": "Tom Tillistrand",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.4"
+  }
+}

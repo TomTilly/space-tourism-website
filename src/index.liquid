@@ -1,0 +1,12 @@
+---
+title: My First Eleventy Site
+layout: base.liquid
+---
+
+<h2>From index.md</h2>
+
+{% for page in collections.pages %}
+- {{ page.data.title }} – {{ page.url}}
+{% endfor %}
+
+<img src="{{ catpic }}" style="max-width: 100%">
