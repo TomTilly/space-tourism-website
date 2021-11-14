@@ -1,4 +1,105 @@
+/* Variables */
+
+:root {
+  --black: #0b0d17;
+  --light-purple: #d0d6f9;
+  --white: #ffffff;
+
+  --base-font-size: 62.5%; /* Equals 10px by default */
+  --body: 1.6rem;
+  --h1: 15rem;
+  --h2: 10rem;
+  --h3: 5.6rem;
+  --h4: 3.2rem;
+  --h5: 2.8rem;
+  --small: 1.4rem;
+}
+
+/* Global CSS */
+
 html {
-  font-family: cursive;
-  background: orange;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: var(--base-font-size);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: var(--body);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+.subheading-1 {
+  font-family: 'Bellefair', serif;
+  margin-top: 0;
+}
+
+h5,
+.h5,
+.subheading-2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-top: 0;
+}
+
+h1,
+.h1 {
+  font-size: var(--h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--h4);
+}
+
+h5,
+.h5 {
+  font-size: var(--h5);
+  letter-spacing: 4.75px;
+}
+
+.subheading-1 {
+  font-size: var(--h5);
+}
+
+.subheading-2 {
+  font-size: var(--small);
+  letter-spacing: 2.35px;
+}
+
+p {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
