@@ -19,7 +19,6 @@
 
 html {
   box-sizing: border-box;
-  margin: 0;
   font-size: var(--base-font-size);
 }
 
@@ -34,6 +33,7 @@ body {
   font-size: var(--body);
   background-color: var(--black);
   color: var(--white);
+  margin: 0;
 }
 
 h1,
@@ -102,4 +102,65 @@ p:last-child {
 img {
   max-width: 100%;
   height: auto;
+}
+
+body {
+  background-image: url('/assets/home/background-home-desktop.jpg');
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  font-size: 1.6rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 2.7px;
+  counter-reset: nav;
+  text-transform: uppercase;
+  padding: 0 10rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav__ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.nav__link {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 3rem 0;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  border-bottom: 3px solid #979797;
+}
+
+.nav__link--active {
+  border-bottom: 3px solid var(--white);
+}
+
+.nav__link::before {
+  content: '0' counter(nav);
+  margin-right: 1.1rem;
+  font-weight: bold;
+}
+
+.nav__item:not(:first-child) .nav__link::before {
+  counter-increment: nav;
 }
