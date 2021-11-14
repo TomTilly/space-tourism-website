@@ -14,8 +14,11 @@
 <body>
   <header class="header">
     <a href="/" class="logo"><img src="/assets/shared/logo.svg"></a>
-  {% comment %} https://www.11ty.dev/docs/plugins/navigation/ {% endcomment %}
+    <div class="line"></div>
+    {% comment %} https://www.11ty.dev/docs/plugins/navigation/ {% endcomment %}
+    <button class="hamburger"><img class="hamburger__icon" src="/assets/shared/icon-hamburger.svg"></button>
     <nav class="nav">
+      <button class="close-btn"><img class="close-btn__icon" src="/assets/shared/icon-close.svg"></button>
       <ul class="nav__ul">
       {% assign navigation = collections.all | eleventyNavigation %}
       {% for entry in navigation %}
@@ -27,5 +30,6 @@
     </nav>
   </header>
   <main>{{ content | safe }}</main>
+  <script src="{{ '/js/main.js' | url }}" defer></script>
 </body>
 </html>

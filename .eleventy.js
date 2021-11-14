@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
 
   // https://www.11ty.dev/docs/copy/
   eleventyConfig.addPassthroughCopy('./src/assets/');
+  eleventyConfig.addPassthroughCopy('./src/js/');
   eleventyConfig.addPassthroughCopy('./src/styles/');
   eleventyConfig.addWatchTarget('./src/styles/');
 
