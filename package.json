@@ -6,6 +6,10 @@
     "start": "eleventy --serve",
     "build": "eleventy"
   },
+  "engines": {
+    "node": "17.2.0",
+    "npm": "8.1.4"
+  },
   "author": "Tom Tillistrand",
   "license": "ISC",
   "devDependencies": {
