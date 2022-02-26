@@ -13,17 +13,17 @@
 </head>
 <body>
   <header class="header">
-    <a href="/" class="logo"><img src="/assets/shared/logo.svg"></a>
+    <a href="/" class="logo" aria-label="Home"><img src="/assets/shared/logo.svg" alt="Space Tours Co. Logo"></a>
     <div class="line"></div>
     {% comment %} https://www.11ty.dev/docs/plugins/navigation/ {% endcomment %}
     <button class="hamburger"><img class="hamburger__icon" src="/assets/shared/icon-hamburger.svg"></button>
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <button class="close-btn"><img class="close-btn__icon" src="/assets/shared/icon-close.svg"></button>
       <ul class="nav__ul">
       {% assign navigation = collections.all | eleventyNavigation %}
       {% for entry in navigation %}
         <li class="nav__item">
-          <a class="nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}</a>
+          <a class="nav__link" {% if entry.url == page.url %}aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
         </li>
       {% endfor %}
       </ul>
