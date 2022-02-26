@@ -305,7 +305,7 @@ main {
   border-right: 3px solid #979797;
 }
 
-.nav__link--active {
+.nav__link[aria-current='page'] {
   border-right: 3px solid var(--white);
 }
 
@@ -316,7 +316,7 @@ main {
     border-bottom: 3px solid #979797;
   }
 
-  .nav__link--active {
+  .nav__link[aria-current='page'] {
     border-right: 0;
     border-bottom: 3px solid var(--white);
   }
